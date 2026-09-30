@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    border: 0;
+    text-align: left;
+}
+
+body {
+    margin: 0;
+    background: #f7f3ed;
+    color: #24231f;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 6%;
+    background: #f7f3ed;
+}
+
+.logo,
+.footer-logo {
+    color: #24231f;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.footer-logo span,
+.hero h1 span {
+    color: #d45d3f;
+}
+
+.navbar nav,
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbar a,
+.section-heading a,
+.footer-links a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.section-heading a:hover,
+.footer-links a:hover {
+    color: #d45d3f;
+}
+
+.nav-actions button,
+.product-price button {
+    border: 0;
+    cursor: pointer;
+}
+
+.nav-actions button {
+    padding: 4px;
+    background: transparent;
+    font-size: 20px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.hero {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    min-height: 560px;
+    padding: 72px 8%;
+    background: #e9ded0;
+}
+
+.hero-tag,
+.section-tag {
+    color: #d45d3f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 18px 0;
+    color: #24231f;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 0.98;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero-text {
+    max-width: 420px;
+    margin-bottom: 28px;
+}
+
+.hero-btn,
+.newsletter-form button {
+    border: 0;
+    padding: 14px 20px;
+    background: #24231f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 360px;
+    display: grid;
+    place-items: center;
+}
+
+.hero-glow,
+.hero-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hero-glow {
+    width: 310px;
+    height: 310px;
+    background: #d4a87e;
+}
+
+.hero-circle {
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 120px;
+    top: 20px;
+    right: 8%;
+    background: #d45d3f;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero-product {
+    position: relative;
+    z-index: 1;
+}
+
+.product-shape {
+    width: 150px;
+    height: 250px;
+    border-radius: 24px 24px 45px 45px;
+    background: #24231f;
+    transform: rotate(12deg);
+    box-shadow: 18px 18px 0 #d45d3f;
+}
+
+.product-stripe {
+    width: 100%;
+    height: 18px;
+    margin-top: 72px;
+    background: #e9ded0;
+}
+
+.featured-section,
+.categories-section,
+.features,
+.newsletter {
+    padding: 72px 8%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    margin: 8px 0 0;
+    color: #24231f;
+    font-size: 34px;
+}
+
+.products-grid,
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.home-product-card,
+.category-card {
+    overflow: hidden;
+    background: #fff;
+}
+
+.product-placeholder {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 250px;
+    background: #d7c2ac;
+    color: #6c594a;
+}
+
+.placeholder-two { background: #c5d0cc; }
+.placeholder-three { background: #d8c5c8; }
+
+.product-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 6px 9px;
+    background: #d45d3f;
+    color: #fff;
+    font-size: 11px;
+}
+
+.home-product-info {
+    padding: 18px;
+}
+
+.home-product-info p {
+    color: #d45d3f;
+    font-size: 13px;
+}
+
+.home-product-info h3 {
+    margin: 8px 0 18px;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-price button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #24231f;
+    color: #fff;
+    font-size: 20px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    background: #24231f;
+    color: #fff;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.feature > span {
+    color: #d45d3f;
+    font-size: 28px;
+}
+
+.feature h3,
+.feature p {
+    margin: 0;
+}
+
+.feature p {
+    color: #b9b1a9;
+    font-size: 14px;
+}
+
+.category-card {
+    min-height: 260px;
+    display: flex;
+    align-items: end;
+    padding: 24px;
+    color: #fff;
+    background: #807065;
+}
+
+.category-two { background: #526361; }
+.category-three { background: #805c63; }
+
+.category-card p,
+.category-card h3,
+.category-card span {
+    margin: 0 0 8px;
+}
+
+.category-card h3 {
+    font-size: 28px;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: #d4a87e;
+}
+
+.newsletter h2 {
+    margin: 8px 0;
+    color: #24231f;
+}
+
+.newsletter-form {
+    display: flex;
+    min-width: min(100%, 420px);
+}
+
+.newsletter-form input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    padding: 14px;
+}
+
+.home-footer {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 24px;
+    padding: 56px 8% 32px;
+    background: #24231f;
+    color: #fff;
+}
+
+.footer-logo { color: #fff; }
+
+.footer-logo p {
+    margin-top: 16px;
+    color: #b9b1a9;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.footer-links h3 { margin: 0 0 8px; }
+.copyright {
+    padding: 16px 8%;
+    background: #24231f;
+    color: #b9b1a9;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .navbar nav { display: none; }
+    .menu-btn { display: block; }
+    .hero { grid-template-columns: 1fr; padding-top: 48px; }
+    .hero-visual { min-height: 280px; }
+    .products-grid,
+    .categories-grid,
+    .features,
+    .home-footer { grid-template-columns: 1fr; }
+    .newsletter { display: block; }
+    .newsletter-form { margin-top: 24px; }
+}
+
+.products-container {
+    width: 100%;
+    padding: 28px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
